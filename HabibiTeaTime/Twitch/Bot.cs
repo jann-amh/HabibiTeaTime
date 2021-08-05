@@ -54,7 +54,7 @@ namespace HabibiTeaTime.Twitch
 
         private void Client_OnJoinedChannel(object sender, OnJoinedChannelArgs e)
         {
-            Console.WriteLine("Joined   " + e.Channel);
+            Console.WriteLine("Joined " + e.Channel);
         }
 
         private void Client_OnConnected(object sender, OnConnectedArgs e)
