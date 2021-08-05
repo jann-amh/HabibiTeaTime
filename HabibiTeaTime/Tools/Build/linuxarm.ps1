@@ -1,0 +1,2 @@
+﻿dotnet publish -o ..\..\bin\Publish\linuxarm -c Release -r linux-arm -p:PublishSingleFile=true --self-contained true ..\..\HabibiTeaTime.csproj
+xcopy ..\..\Resources ..\..\bin\Publish\linuxarm\Resources /E /Y /I
