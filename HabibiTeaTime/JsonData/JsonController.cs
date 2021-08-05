@@ -9,7 +9,7 @@ namespace HabibiTeaTime.JsonData
 
         public static void LoadData()
         {
-            CommandData = JsonSerializer.Deserialize<CommandData>(File.ReadAllText("./JsonData/Commands.json"));
+            CommandData = JsonSerializer.Deserialize<CommandData>(File.ReadAllText("./Resources/Commands.json"));
         }
     }
 }
