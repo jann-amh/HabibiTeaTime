@@ -7,6 +7,35 @@
         "pong",
         "test"
       ]
+    },
+    {
+      "CommandName": "help",
+      "Alias": [
+        "help",
+        "commands"
+      ]
+    },
+    {
+      "CommandName": "color",
+      "Alias": [
+        "color"
+      ]
+    },
+    {
+      "CommandName": "coinflip",
+      "Alias": [
+        "coin",
+        "flipcoin"
+      ]
+    },
+    {
+      "CommandName": "math",
+      "Alias": [
+        "maths",
+        "calculate",
+        "calc",
+        "math"
+      ]
     }
   ]
 }
