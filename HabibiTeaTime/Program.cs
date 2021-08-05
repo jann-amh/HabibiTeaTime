@@ -1,13 +1,13 @@
-﻿using System;
+﻿using HabibiTeaTime.JsonData;
 using HabibiTeaTime.Twitch;
 
 namespace HabibiTeaTime
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
+            JsonController.LoadData();
             Bot bot = new();
 
             while (true)

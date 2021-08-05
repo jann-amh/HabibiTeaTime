@@ -1,16 +1,16 @@
-﻿using HabibiTeaTime.Properties;
+﻿using HabibiTeaTime.Messages;
+using HabibiTeaTime.Properties;
 using System;
 using TwitchLib.Client;
 using TwitchLib.Client.Enums;
 using TwitchLib.Client.Events;
-using TwitchLib.Client.Extensions;
 using TwitchLib.Client.Models;
 using TwitchLib.Communication.Clients;
 using TwitchLib.Communication.Enums;
 using TwitchLib.Communication.Models;
+using static HLE.Time.TimeHelper;
 
 namespace HabibiTeaTime.Twitch
-
 {
     public class Bot
     {
@@ -21,6 +21,12 @@ namespace HabibiTeaTime.Twitch
         public ClientOptions ClientOptions { get; private set; }
 
         public WebSocketClient WebSocketClient { get; private set; }
+
+        public string Runtime => ConvertUnixTimeToTimeStamp(_runtime);
+
+        private readonly long _runtime = Now();
+
+        private static Bot _habibiTeaTime;
 
 
         public Bot()
@@ -47,8 +53,20 @@ namespace HabibiTeaTime.Twitch
             TwitchClient.Connect();
         }
 
+        public void SetBot()
+        {
+            _habibiTeaTime = this;
+        }
+
+        public void Send(string channel, string message)
+        {
+            TwitchClient.SendMessage(channel, message);
+        }
+
         private void Client_OnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
+            MessageHandler.Handle(this, e.ChatMessage);
+
             Console.WriteLine($"#{e.ChatMessage.Channel}>{e.ChatMessage.Username}: {e.ChatMessage.Message}");
         }
 
@@ -64,7 +82,7 @@ namespace HabibiTeaTime.Twitch
 
         private void Client_OnLog(object sender, OnLogArgs e)
         {
-            
+
         }
     }
 }

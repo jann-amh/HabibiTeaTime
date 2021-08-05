@@ -1,0 +1,12 @@
+{
+  "Commands": [
+    {
+      "CommandName": "ping",
+      "Alias": [
+        "ping",
+        "pong",
+        "test"
+      ]
+    }
+  ]
+}
