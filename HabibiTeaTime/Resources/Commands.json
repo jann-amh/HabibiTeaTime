@@ -36,6 +36,13 @@
         "calc",
         "math"
       ]
+    },
+    {
+      "CommandName": "vanish",
+      "Alias": [
+        "v",
+        "timeout"
+      ]
     }
   ]
 }

@@ -43,7 +43,7 @@ namespace HabibiTeaTime.Twitch
             {
                 AutoReListenOnException = true
             };
-            TwitchClient.Initialize(ConnectionCredentials, "xxdirkthecrafterxx");
+            TwitchClient.Initialize(ConnectionCredentials, Config.GetChannels());
 
             TwitchClient.OnLog += Client_OnLog;
             TwitchClient.OnConnected += Client_OnConnected;
@@ -63,6 +63,10 @@ namespace HabibiTeaTime.Twitch
             TwitchClient.SendMessage(channel, message);
         }
 
+        private void JoinChannel(string channel)
+        {
+
+        }
         private void Client_OnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
             MessageHandler.Handle(this, e.ChatMessage);
@@ -82,7 +86,12 @@ namespace HabibiTeaTime.Twitch
 
         private void Client_OnLog(object sender, OnLogArgs e)
         {
+            //ConsoleOut($"LOG>{e.Data}");
+        }
 
+        private void Client_OnDisconnect(object sender, OnDisconnectedArgs e)
+        {
+            Console.WriteLine($"Bot Disconnected.");
         }
     }
 }
