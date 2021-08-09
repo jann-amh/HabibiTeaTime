@@ -7,7 +7,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
     {
         public static void Handle(Bot bot, ChatMessage chatMessage)
         {
-            bot.Send(chatMessage.Channel, $"/me Habibi TeaTime PONG! Runtime: {bot.Runtime} ");
+            bot.Send(chatMessage.Channel, $"/me Habibi TeaTime Pong! Runtime: {bot.Runtime} ");
         }
     }
 }

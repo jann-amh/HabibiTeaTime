@@ -43,6 +43,14 @@
         "v",
         "timeout"
       ]
+    },
+    {
+      "CommandName": "chatterino",
+      "Alias": [
+        "chatterino7",
+        "current chatterino",
+        "chatterino"
+      ]
     }
   ]
 }
