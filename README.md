@@ -7,7 +7,7 @@
 			Chatterino
 		</td>
 		<td>
-			Tis cmd gives you a link to the current Chatterino version.
+			This cmd gives you a link to the current Chatterino version.
 		</td>
 	</tr>
 	<tr>
