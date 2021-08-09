@@ -1,5 +1,5 @@
 <h1> HabibiTeaTime </h1>
-<h4> HabibiTeaTime is a twitch chat bot. The prefix of the bot is "~". If you have any problems using the bot or some suggestions, make an issue or write in the bots chat. </h4>
+<h4> HabibiTeaTime is a Twitch chat bot. The prefix of the bot is "~". If you have any problems using the bot or some suggestions, make an issue or write in the bot's chat. </h4>
 <h2> Commands </h2>
 <table>
 	<tr>
@@ -7,7 +7,7 @@
 			Coinflip
 		</td>
 		<td>
-			Basic Conflip (50/50 chance)
+			Basic coinflip (50/50 chance)
 		</td>
 	</tr>
 	<tr>
