@@ -51,6 +51,12 @@
         "current chatterino",
         "chatterino"
       ]
+    },
+    {
+      "CommandName": "massping",
+      "Alias": [
+        "massping"
+      ]
     }
   ]
 }
