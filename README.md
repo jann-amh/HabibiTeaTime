@@ -27,6 +27,22 @@
 		</td>
 	<tr>
 		<td>
+			Help
+		</td>
+		<td>
+			This cmd gives you a link to this repository
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Massping
+		</td>
+		<td>
+			This cmd pings every user in the channel (only works if u are a mod or the broadcaster)
+		</td>
+	</tr>
+	<tr>
+		<td>
 			Math
 		</td>
 		<td>
