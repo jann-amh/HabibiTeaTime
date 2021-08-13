@@ -3,6 +3,7 @@ using HabibiTeaTime.Messages;
 using HabibiTeaTime.Twitch;
 using System.Collections.Generic;
 using TwitchLib.Client.Models;
+using HLE.Emojis;
 
 namespace HabibiTeaTime.Commands.CommandClasses
 {
@@ -21,7 +22,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
                 string result = string.Empty;
                 chatters.ForEach(c =>
                 {
-                    result += $" {c} :tf:";
+                    result += $" {c} BatChest / {Emoji.Bell}";
                 });
                 return result.Trim();
             }
