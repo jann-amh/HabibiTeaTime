@@ -1,9 +1,9 @@
 ﻿using HabibiTeaTime.HttpRequest.Models;
 using HabibiTeaTime.Messages;
 using HabibiTeaTime.Twitch;
+using HLE.Emojis;
 using System.Collections.Generic;
 using TwitchLib.Client.Models;
-using HLE.Emojis;
 
 namespace HabibiTeaTime.Commands.CommandClasses
 {
@@ -28,9 +28,11 @@ namespace HabibiTeaTime.Commands.CommandClasses
             }
             else
             {
-                return $"{chatMessage.Username}, you aren't a mod or the broadcaster";
+                return $"/me{chatMessage.Username}, you aren't a mod or the broadcaster";
             }
 
         }
     }
 }
+
+#warning adden das ich immer den cmd ausführen kann 

@@ -14,7 +14,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
         private static void SendCoinFlip(Bot bot, ChatMessage chatMessage)
         {
             string result = Random.Int(0, 100) >= 50 ? "yes/heads" : "no/tails";
-            bot.Send(chatMessage.Channel, $"{chatMessage.Username}, {result} {Emoji.Coin}");
+            bot.Send(chatMessage.Channel, $"/me {chatMessage.Username}, {result} {Emoji.Coin}");
         }
     }
 }

@@ -31,4 +31,6 @@
     </None>
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties resources_4commands_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

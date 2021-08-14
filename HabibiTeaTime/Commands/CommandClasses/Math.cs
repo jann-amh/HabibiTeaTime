@@ -11,7 +11,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
         }
         private static void SendMathResult(this Bot bot, ChatMessage chatMessage)
         {
-            bot.Send(chatMessage.Channel, $"{chatMessage.Username}, {HttpRequest.HttpRequest.GetMathResult(chatMessage.Message[(chatMessage.Message.Split()[0].Length + 1)..])}");
+            bot.Send(chatMessage.Channel, $"/me {chatMessage.Username}, {HttpRequest.HttpRequest.GetMathResult(chatMessage.Message[(chatMessage.Message.Split()[0].Length + 1)..])}");
         }
     }
 }

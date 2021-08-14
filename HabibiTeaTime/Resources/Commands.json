@@ -57,6 +57,13 @@
       "Alias": [
         "massping"
       ]
+    },
+    {
+      "CommandName": "randomNumber",
+      "Alias": [
+        "randomnumber",
+        "rando"
+      ]
     }
   ]
 }

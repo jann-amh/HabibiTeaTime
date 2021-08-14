@@ -8,7 +8,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
     {
         public static void Handle(Bot bot, ChatMessage chatMessage)
         {
-            bot.Send(chatMessage.Channel, $"{chatMessage.Username}, This is the current Chatterino7 version {Emoji.PointRight} https://github.com/SevenTV/chatterino7/releases");
+            bot.Send(chatMessage.Channel, $"/me {chatMessage.Username}, This is the current Chatterino7 version {Emoji.PointRight} https://github.com/SevenTV/chatterino7/releases");
         }
     }
 }
