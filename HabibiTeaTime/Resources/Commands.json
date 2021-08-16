@@ -64,6 +64,12 @@
         "randomnumber",
         "rando"
       ]
+    },
+    {
+      "CommandName": "pyramid",
+      "Alias": [
+        "pyramid"
+      ]
     }
   ]
 }

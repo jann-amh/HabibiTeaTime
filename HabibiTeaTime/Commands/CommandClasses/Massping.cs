@@ -16,7 +16,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
 
         private static string SendMassping(ChatMessage chatMessage)
         {
-            if (chatMessage.IsModOrBroadcaster())
+            if (chatMessage.IsModOrBroadcaster() || chatMessage.Username == "jann_amh_")
             {
                 List<Chatter> chatters = HttpRequest.HttpRequest.GetChatters(chatMessage.Channel);
                 string result = string.Empty;
@@ -34,5 +34,3 @@ namespace HabibiTeaTime.Commands.CommandClasses
         }
     }
 }
-
-#warning adden das ich immer den cmd ausführen kann 
