@@ -59,6 +59,14 @@
 	</tr>
 	<tr>
 		<td>
+			Pyramid
+		</td>
+		<td>
+			This cmd creates a pyramid of emotes in chat.
+		</td>
+	</tr>	
+	<tr>
+		<td>
 			Vanish
 		</td>
 		<td>
