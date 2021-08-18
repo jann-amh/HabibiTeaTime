@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=localhost;Database=HabibiTeaTime;User ID=root; Password=;" MySql.EntityFrameworkCore -OutputDir ./Database/Models -f
