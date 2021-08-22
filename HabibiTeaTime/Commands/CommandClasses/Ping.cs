@@ -5,7 +5,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
 {
     public static class Ping
     {
-        public static void Handle(Bot bot, ChatMessage chatMessage)
+        public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             bot.Send(chatMessage.Channel, $"/me Habibi TeaTime Pong! Runtime: {bot.Runtime} ");
         }

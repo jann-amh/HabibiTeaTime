@@ -12,7 +12,7 @@ using static HLE.Time.TimeHelper;
 
 namespace HabibiTeaTime.Twitch
 {
-    public class Bot
+    public class TwitchBot
     {
         public TwitchClient TwitchClient { get; private set; }
 
@@ -26,10 +26,10 @@ namespace HabibiTeaTime.Twitch
 
         private readonly long _runtime = Now();
 
-        private static Bot _habibiTeaTime;
+        private static TwitchBot _habibiTeaTime;
 
 
-        public Bot()
+        public TwitchBot()
         {
             ConnectionCredentials = new(Resources.Username, Resources.OAuth);
             ClientOptions = new()

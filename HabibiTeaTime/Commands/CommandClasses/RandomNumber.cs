@@ -16,7 +16,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
             return Random.Int(min, max);
         }
 
-        public static void Handle(Bot bot, ChatMessage chatMessage)
+        public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + @"\w+\s-?\d+\s-?\d+"))
             {

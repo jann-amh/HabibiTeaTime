@@ -5,7 +5,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
 {
     public static class Pyramid
     {
-        public static void Handle(Bot bot, ChatMessage chatMessage)
+        public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             int width = 3;
             if (chatMessage.Message.Split().Length.Equals(2))

@@ -7,7 +7,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
 {
     public static class Vanish
     {
-        public static void Handle(Bot bot, ChatMessage chatMessage)
+        public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             bot.TwitchClient.TimeoutUser(chatMessage.Channel, chatMessage.Username, TimeSpan.FromSeconds(1));
         }

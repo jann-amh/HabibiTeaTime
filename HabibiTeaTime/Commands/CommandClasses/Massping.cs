@@ -9,7 +9,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
 {
     public static class Massping
     {
-        public static void Handle(Bot bot, ChatMessage chatMessage)
+        public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             bot.Send(chatMessage.Channel, SendMassping(chatMessage));
         }

@@ -9,7 +9,7 @@ namespace HabibiTeaTime.Commands
 {
     public static class CommandHandler
     {
-        public static void Handle(Bot bot, ChatMessage chatMessage)
+        public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             foreach (Command command in JsonController.CommandData.Commands)
             {

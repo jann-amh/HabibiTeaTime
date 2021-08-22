@@ -8,7 +8,7 @@ namespace HabibiTeaTime
         private static void Main(string[] args)
         {
             JsonController.LoadData();
-            Bot bot = new();
+            TwitchBot bot = new();
 
             while (true)
             {
