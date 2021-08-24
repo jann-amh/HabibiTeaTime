@@ -1,5 +1,4 @@
 ﻿using HabibiTeaTime.Commands;
-using HabibiTeaTime.Commands.PassiveActions;
 using HabibiTeaTime.Twitch;
 using TwitchLib.Client.Models;
 
