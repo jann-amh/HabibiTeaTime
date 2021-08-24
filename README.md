@@ -73,4 +73,16 @@
 			This cmd deletes your previous messages
 		</td>
 	</tr>
+</table> 
+<h2>Passive Actions</h2>
+<h4> The Bot has various Passive Actions listed down here:</h4>
+<table>
+	<tr>
+		<td>
+			Message interruptions
+		</td>
+		<td>
+			If any user wants to type a four piece emote, the bot breakes the emote combo.
+		</td>
+	</tr>
 </table>
