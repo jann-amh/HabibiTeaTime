@@ -7,7 +7,7 @@ namespace HabibiTeaTime.Commands.PassiveActions
     {
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
-            if (chatMessage.Message == "HabibiTeaTime")
+            if (chatMessage.Message == "Habibi TeaTime")
             {
                 bot.Send(chatMessage.Channel, "Habibi TeaTime");
             }
