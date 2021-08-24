@@ -15,7 +15,7 @@
 			Coinflip
 		</td>
 		<td>
-			Basic coinflip (50/50 chance)
+			Basic coinflip (50/50 chance).
 		</td>
 	</tr>
 	<tr>
@@ -23,14 +23,14 @@
 			Color
 		</td>
 		<td>
-			This cmd sends a message with the color of your name
+			This cmd sends a message with the color of your name.
 		</td>
 	<tr>
 		<td>
 			Help
 		</td>
 		<td>
-			This cmd gives you a link to this repository
+			This cmd gives you a link to this repository.
 		</td>
 	</tr>
 	<tr>
@@ -38,7 +38,7 @@
 			Massping
 		</td>
 		<td>
-			This cmd pings every user in the channel (only works if u are a mod or the broadcaster)
+			This cmd pings every user in the channel (only works if u are a mod or the broadcaster).
 		</td>
 	</tr>
 	<tr>
@@ -46,7 +46,7 @@
 			Math
 		</td>
 		<td>
-			This cmd solves any mathematical calculation
+			This cmd solves any mathematical calculation.
 		</td>
 	</tr>
 	<tr>
@@ -54,7 +54,7 @@
 			Ping
 		</td>
 		<td>
-			Ping cmd with current uptime
+			Ping cmd with current uptime.
 		</td>
 	</tr>
 	<tr>
@@ -67,10 +67,17 @@
 	</tr>	
 	<tr>
 		<td>
+			Rando(random number)
+		</td>
+		<td>
+			The bot gives out a random number. U can also type a range of two numbers. The bot will give u a random number in the given range. (The range is limited to 2,147,483,647 (max range of Int32)).
+		</td>
+	<tr>
+		<td>
 			Vanish
 		</td>
 		<td>
-			This cmd deletes your previous messages
+			This cmd deletes your previous messages.
 		</td>
 	</tr>
 </table> 
@@ -83,6 +90,14 @@
 		</td>
 		<td>
 			If any user wants to type a four piece emote, the bot breakes the emote combo.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			User specific actions
+		</td>
+		<td>
+			If some specific users send a message, the bot returns a funny emote after the message.
 		</td>
 	</tr>
 </table>
