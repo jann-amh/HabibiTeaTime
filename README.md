@@ -1,4 +1,8 @@
 <h1> HabibiTeaTime </h1>
+
+![habibi](https://user-images.githubusercontent.com/58480669/130861712-fe31bc96-3393-46eb-a677-d1a2f81716b5.png)
+![TeaTime](https://user-images.githubusercontent.com/58480669/130861718-ba4958e1-9ec7-4547-ae06-e8f7371793cf.jpeg)
+
 <h4> HabibiTeaTime is a Twitch chat bot. The prefix of the bot is "~". If you have any problems using the bot or some suggestions, make an issue or write in the bot's chat. </h4>
 <h2> Commands </h2>
 <table>
