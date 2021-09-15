@@ -11,26 +11,23 @@ namespace HabibiTeaTime.Commands.CommandClasses
     {
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
-            bot.Send(chatMessage.Channel, SendMassping(chatMessage));
-        }
-
-        private static string SendMassping(ChatMessage chatMessage)
-        {
             if (chatMessage.IsModOrBroadcaster() || chatMessage.Username == "jann_amh_")
             {
-                List<Chatter> chatters = HttpRequest.HttpRequest.GetChatters(chatMessage.Channel);
-                string result = string.Empty;
-                chatters.ForEach(c =>
-                {
-                    result += $" {c} BatChest / {Emoji.Bell}";
-                });
-                return result.Trim();
-            }
-            else
-            {
-                return $"/me{chatMessage.Username}, you aren't a mod or the broadcaster";
+                SendMassping(bot, chatMessage);
             }
 
+        }
+
+        private static void SendMassping(TwitchBot twitchBot, ChatMessage chatMessage)
+        {
+            List<Chatter> chatters = HttpRequest.HttpRequest.GetChatters(chatMessage.Channel);
+            string result = string.Empty;
+            chatters.ForEach(c =>
+            {
+                result += $"{c} BatChest / {Emoji.Bell}";
+            });
+            DividedMessage dividedMessage = new(twitchBot, chatMessage.Channel, result);
+            dividedMessage.StartSending();
         }
     }
 }

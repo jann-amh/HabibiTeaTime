@@ -16,6 +16,11 @@ namespace HabibiTeaTime.Commands.PassiveActions
             {
                 bot.Send(chatMessage.Channel, $"BatChest {HLE.Emojis.Emoji.MiddleFinger}");
             }
+
+            if (chatMessage.Username == "lisaseltern")
+            {
+                bot.Send(chatMessage.Channel, $"TriHard {HLE.Emojis.Emoji.MiddleFinger} {HLE.Emojis.Emoji.PointUp}");
+            }
         }
     }
 }
