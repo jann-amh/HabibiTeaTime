@@ -1,6 +1,6 @@
-﻿using HabibiTeaTime.Properties;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using HabibiTeaTime.Properties;
 
 namespace HabibiTeaTime.Twitch
 {

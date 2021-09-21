@@ -55,8 +55,7 @@
     {
       "CommandName": "massping",
       "Alias": [
-        "massping",
-        "Massping"
+        "massping"
       ]
     },
     {
@@ -70,6 +69,13 @@
       "CommandName": "pyramid",
       "Alias": [
         "pyramid"
+      ]
+    },
+    {
+      "CommandName": "google",
+      "Alias": [
+        "google",
+        "search"
       ]
     }
   ]

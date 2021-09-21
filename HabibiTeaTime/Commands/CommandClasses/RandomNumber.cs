@@ -1,7 +1,7 @@
-﻿using HabibiTeaTime.Twitch;
+﻿using System.Text.RegularExpressions;
+using HabibiTeaTime.Twitch;
 using HLE.Randoms;
 using HLE.Strings;
-using System.Text.RegularExpressions;
 using TwitchLib.Client.Models;
 
 namespace HabibiTeaTime.Commands.CommandClasses

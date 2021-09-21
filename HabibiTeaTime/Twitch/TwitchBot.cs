@@ -1,6 +1,6 @@
-﻿using HabibiTeaTime.Messages;
+﻿using System;
+using HabibiTeaTime.Messages;
 using HabibiTeaTime.Properties;
-using System;
 using TwitchLib.Client;
 using TwitchLib.Client.Enums;
 using TwitchLib.Client.Events;

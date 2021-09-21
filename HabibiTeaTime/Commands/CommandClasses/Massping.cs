@@ -1,8 +1,8 @@
-﻿using HabibiTeaTime.HttpRequest.Models;
+﻿using System.Collections.Generic;
+using HabibiTeaTime.HttpRequest.Models;
 using HabibiTeaTime.Messages;
 using HabibiTeaTime.Twitch;
 using HLE.Emojis;
-using System.Collections.Generic;
 using TwitchLib.Client.Models;
 
 namespace HabibiTeaTime.Commands.CommandClasses
@@ -13,6 +13,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
         {
             if (chatMessage.IsModOrBroadcaster() || chatMessage.Username == "jann_amh_")
             {
+                System.Console.WriteLine("van");
                 SendMassping(bot, chatMessage);
             }
 
@@ -20,6 +21,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
 
         private static void SendMassping(TwitchBot twitchBot, ChatMessage chatMessage)
         {
+
             List<Chatter> chatters = HttpRequest.HttpRequest.GetChatters(chatMessage.Channel);
             string result = string.Empty;
             chatters.ForEach(c =>

@@ -1,5 +1,5 @@
-﻿using HabibiTeaTime.Twitch;
-using System;
+﻿using System;
+using HabibiTeaTime.Twitch;
 using TwitchLib.Client.Extensions;
 using TwitchLib.Client.Models;
 

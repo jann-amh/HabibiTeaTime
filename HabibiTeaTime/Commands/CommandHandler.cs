@@ -1,8 +1,8 @@
-﻿using HabibiTeaTime.JsonData;
+﻿using System;
+using System.Text.RegularExpressions;
+using HabibiTeaTime.JsonData;
 using HabibiTeaTime.Twitch;
 using HLE.Strings;
-using System;
-using System.Text.RegularExpressions;
 using TwitchLib.Client.Models;
 
 namespace HabibiTeaTime.Commands

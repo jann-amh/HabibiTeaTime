@@ -1,7 +1,7 @@
-﻿using HabibiTeaTime.Twitch;
-using HLE.Strings;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
+using HabibiTeaTime.Twitch;
+using HLE.Strings;
 
 namespace HabibiTeaTime.Messages
 {
