@@ -13,11 +13,15 @@ namespace HabibiTeaTime.Commands
         {
             foreach (Command command in JsonController.CommandData.Commands)
             {
-                foreach (string alias in command.Alias)
+                if (!bot.IsOnCooldown(chatMessage.Username, command.CommandName))
                 {
-                    if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + alias + @"(\s|$)"))
+                    foreach (string alias in command.Alias)
                     {
-                        Type.GetType($"HabibiTeaTime.Commands.CommandClasses.{FirstCharToUppercase(command.CommandName)}").GetMethod("Handle").Invoke(null, new object[] { bot, chatMessage });
+                        if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + alias + @"(\s|$)"))
+                        {
+                            Type.GetType($"HabibiTeaTime.Commands.CommandClasses.{FirstCharToUppercase(command.CommandName)}").GetMethod("Handle").Invoke(null, new object[] { bot, chatMessage });
+                            bot.AddCooldown(chatMessage.Username, command.CommandName);
+                        }
                     }
                 }
             }

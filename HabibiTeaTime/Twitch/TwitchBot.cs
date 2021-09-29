@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using HabibiTeaTime.Messages;
 using HabibiTeaTime.Properties;
+using HabibiTeaTime.Twitch.Cooldowns;
 using TwitchLib.Client;
 using TwitchLib.Client.Enums;
 using TwitchLib.Client.Events;
@@ -22,12 +25,11 @@ namespace HabibiTeaTime.Twitch
 
         public WebSocketClient WebSocketClient { get; private set; }
 
+        public List<Cooldown> Cooldowns { get; private set; } = new();
+
         public string Runtime => ConvertUnixTimeToTimeStamp(_runtime);
 
         private readonly long _runtime = Now();
-
-        private static TwitchBot _habibiTeaTime;
-
 
         public TwitchBot()
         {
@@ -53,20 +55,11 @@ namespace HabibiTeaTime.Twitch
             TwitchClient.Connect();
         }
 
-        public void SetBot()
-        {
-            _habibiTeaTime = this;
-        }
-
         public void Send(string channel, string message)
         {
             TwitchClient.SendMessage(channel, message);
         }
 
-        private void JoinChannel(string channel)
-        {
-
-        }
         private void Client_OnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
             MessageHandler.Handle(this, e.ChatMessage);
@@ -92,6 +85,19 @@ namespace HabibiTeaTime.Twitch
         private void Client_OnDisconnect(object sender, OnDisconnectedArgs e)
         {
             Console.WriteLine($"Bot Disconnected.");
+        }
+
+        public bool IsOnCooldown(string username, string commandType)
+        {
+            return Cooldowns.Any(c => c.Username == username && c.Type == commandType.ToLower() && c.Time > Now());
+        }
+
+        public void AddCooldown(string username, string commandType)
+        {
+            Cooldown cooldown = Cooldowns.FirstOrDefault(c => c.Username == username && c.Type == commandType);
+            Cooldowns.Remove(cooldown);
+            Cooldowns.Add(new(username, commandType));
+
         }
     }
 }

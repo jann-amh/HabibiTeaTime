@@ -6,27 +6,31 @@
         "ping",
         "pong",
         "test"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "help",
       "Alias": [
         "help",
         "commands"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "color",
       "Alias": [
         "color"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "coinflip",
       "Alias": [
         "coin",
         "flipcoin"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "math",
@@ -35,14 +39,16 @@
         "calculate",
         "calc",
         "math"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "vanish",
       "Alias": [
         "v",
         "timeout"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "chatterino",
@@ -50,33 +56,38 @@
         "chatterino7",
         "current chatterino",
         "chatterino"
-      ]
+      ],
+      "Cooldown": 5000
     },
     {
       "CommandName": "massping",
       "Alias": [
         "massping"
-      ]
+      ],
+      "Cooldown": 10000
     },
     {
       "CommandName": "randomNumber",
       "Alias": [
         "randomnumber",
         "rando"
-      ]
+      ],
+      "Command": 5000
     },
     {
       "CommandName": "pyramid",
       "Alias": [
         "pyramid"
-      ]
+      ],
+      "Command": 5000
     },
     {
       "CommandName": "google",
       "Alias": [
         "google",
         "search"
-      ]
+      ],
+      "Cooldown": 5000
     }
   ]
 }

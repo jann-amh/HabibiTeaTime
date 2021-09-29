@@ -7,10 +7,6 @@ namespace HabibiTeaTime.Commands.PassiveActions
     {
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
-            if (chatMessage.Username == "benastro")
-            {
-                bot.Send(chatMessage.Channel, $"BatChest {HLE.Emojis.Emoji.MiddleFinger}");
-            }
 
             if (chatMessage.Username == "lisaseltern")
             {
