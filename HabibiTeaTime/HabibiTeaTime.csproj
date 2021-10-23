@@ -3,7 +3,12 @@
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net6.0</TargetFramework>
+		<ApplicationIcon>habibi.ico</ApplicationIcon>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="habibi.ico" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="EntityFramework" Version="6.4.4" />

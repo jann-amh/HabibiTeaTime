@@ -27,6 +27,11 @@ namespace HabibiTeaTime.Commands.PassiveActions
                 bot.Send(chatMessage.Channel, "no, i dont think so");
 
             }
+
+            if (chatMessage.Username == "pajbot" && chatMessage.Message == "pajaS 🚨 ALERT")
+            {
+                bot.Send(chatMessage.Channel, $"peepoSpookDank {HLE.Emojis.Emoji.RotatingLight} ACHTUNG !");
+            }
         }
     }
 }
