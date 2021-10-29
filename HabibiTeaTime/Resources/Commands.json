@@ -72,14 +72,14 @@
         "randomnumber",
         "rando"
       ],
-      "Command": 5000
+      "Cooldown": 5000
     },
     {
       "CommandName": "pyramid",
       "Alias": [
         "pyramid"
       ],
-      "Command": 5000
+      "Cooldown": 5000
     },
     {
       "CommandName": "google",
