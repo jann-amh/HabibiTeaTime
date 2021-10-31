@@ -1,6 +1,7 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using HabibiTeaTime.Twitch;
-using HLE.Randoms;
+using Random = HLE.Randoms.Random;
 using HLE.Strings;
 using TwitchLib.Client.Models;
 
@@ -8,31 +9,38 @@ namespace HabibiTeaTime.Commands.CommandClasses
 {
     public static class RandomNumber
     {
-        private static int GetRandom(ChatMessage chatMessage)
+        private static readonly Regex _numberRegex = new($@"^{Regex.Escape(Config.Prefix)}\w+\s+-?\d+\s+-?\d+(\s|$)", RegexOptions.IgnoreCase | RegexOptions.Compiled, TimeSpan.FromMilliseconds(250));
+
+        private static int? GetRandom(ChatMessage chatMessage)
         {
-            string[] split = chatMessage.Message.Split();
-            int min = split[1].ToInt();
-            int max = split[2].ToInt();
-            return Random.Int(min, max);
+            try
+            {
+                string[] split = chatMessage.Message.TrimAll().Split();
+                int min = split[1].ToInt();
+                int max = split[2].ToInt();
+                return Random.Int(min, max);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
-            if(chatMessage.Message.Split()[1].All(char.IsDigit))
+            int? randomNumber = null;
+            if (_numberRegex.IsMatch(chatMessage.Message))
             {
-                if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + @"\w+\s-?\d+\s-?\d+"))
-                {
+                randomNumber = GetRandom(chatMessage);
+            }
 
-                bot.Send(chatMessage.Channel, $"/me {GetRandom(chatMessage)}");
-                }
-                else
-                {
-                bot.Send(chatMessage.Channel, $"/me {Random.Int()}");
-                }
+            if (randomNumber is not null)
+            {
+                bot.Send(chatMessage.Channel, $"/me {randomNumber}");
             }
             else
             {
-                bot.Send(chatMessage.Channel, $"/me @{chatMessage.Username}, the number may not be a comma number and must be positive!")
+                bot.Send(chatMessage.Channel, $"/me {Random.Int()}");
             }
         }
     }
