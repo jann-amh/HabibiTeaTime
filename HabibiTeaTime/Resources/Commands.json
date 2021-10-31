@@ -67,7 +67,7 @@
       "Cooldown": 10000
     },
     {
-      "CommandName": "randomNumber",
+      "CommandName": "randomnumber",
       "Alias": [
         "randomnumber",
         "rando"
