@@ -18,14 +18,21 @@ namespace HabibiTeaTime.Commands.CommandClasses
 
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
-            if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + @"\w+\s-?\d+\s-?\d+"))
+            if(chatMessage.Message.Split()[1].All(char.IsDigit))
             {
+                if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + @"\w+\s-?\d+\s-?\d+"))
+                {
 
                 bot.Send(chatMessage.Channel, $"/me {GetRandom(chatMessage)}");
+                }
+                else
+                {
+                bot.Send(chatMessage.Channel, $"/me {Random.Int()}");
+                }
             }
             else
             {
-                bot.Send(chatMessage.Channel, $"/me {Random.Int()}");
+                bot.Send(chatMessage.Channel, $"/me @{chatMessage.Username}, the number may not be a comma number and must be positive!")
             }
         }
     }
