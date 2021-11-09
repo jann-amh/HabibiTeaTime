@@ -15,7 +15,7 @@ namespace HabibiTeaTime.JsonData
 
         public static Command GetCommand(string name)
         {
-            return CommandData.Commands.FirstOrDefault(c => c.CommandName == name.ToLower());
+            return CommandData.Commands.FirstOrDefault(c => c.CommandName.ToLower() == name.ToLower());
         }
     }
 }
