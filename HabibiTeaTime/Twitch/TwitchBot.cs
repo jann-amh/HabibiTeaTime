@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using HabibiTeaTime.Messages;
 using HabibiTeaTime.Properties;
@@ -30,6 +31,10 @@ namespace HabibiTeaTime.Twitch
         public string Runtime => ConvertUnixTimeToTimeStamp(_runtime);
 
         private readonly long _runtime = Now();
+
+        public string SystemInfo => GetSystemInfo();
+
+        public string MemoryUsage => GetMemoryUsage();
 
         public TwitchBot()
         {
@@ -98,6 +103,21 @@ namespace HabibiTeaTime.Twitch
             Cooldowns.Remove(cooldown);
             Cooldowns.Add(new(username, commandType));
 
+        }
+
+        private string GetSystemInfo()
+        {
+            return $"Uptime: {Runtime} || Memory usage: {GetMemoryUsage()}";
+        }
+
+        private string GetMemoryUsage()
+        {
+            return $"{Math.Truncate(Process.GetCurrentProcess().PrivateMemorySize64 / Math.Pow(10, 6) * 100) / 100}MB / 1000MB";
+        }
+
+        public string SendPing(TwitchBot twitchBot)
+        {
+            return $"/me Habibi TeaTime , I'm here! {twitchBot.GetSystemInfo()}";
         }
     }
 }

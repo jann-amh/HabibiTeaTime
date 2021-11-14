@@ -23,7 +23,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
             }
             else
             {
-                bot.Send(chatMessage.Channel, $"You have to type an emote {HLE.Emojis.Emoji.Anger}");
+                bot.Send(chatMessage.Channel, $"{chatMessage.Username} You have to type a single emote {HLE.Emojis.Emoji.Anger}");
             }
 
         }

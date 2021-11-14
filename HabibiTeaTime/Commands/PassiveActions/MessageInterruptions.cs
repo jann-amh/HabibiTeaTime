@@ -1,4 +1,5 @@
-﻿using HabibiTeaTime.Twitch;
+﻿using HabibiTeaTime.Properties;
+using HabibiTeaTime.Twitch;
 using HLE.Emojis;
 using TwitchLib.Client.Models;
 
@@ -32,6 +33,7 @@ namespace HabibiTeaTime.Commands.PassiveActions
             if (chatMessage.Username == "pajbot" && chatMessage.Message == "pajaS 🚨 ALERT")
             {
                 bot.Send(chatMessage.Channel, $"peepoSpookDank {Emoji.RotatingLight} ACHTUNG !");
+                bot.Send(Resources.Offlinechat, $"jannGiga {Emoji.RotatingLight} ALERT {Emoji.Exclamation}");
             }
         }
     }

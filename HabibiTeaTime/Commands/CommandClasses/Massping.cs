@@ -13,7 +13,6 @@ namespace HabibiTeaTime.Commands.CommandClasses
         {
             if (chatMessage.IsModOrBroadcaster() || chatMessage.Username == "jann_amh_")
             {
-                System.Console.WriteLine("van");
                 SendMassping(bot, chatMessage);
             }
 
@@ -26,7 +25,7 @@ namespace HabibiTeaTime.Commands.CommandClasses
             string result = string.Empty;
             chatters.ForEach(c =>
             {
-                result += $"{c} BatChest / {Emoji.Bell}";
+                result += $"{c} {Emoji.Bell}";
             });
             DividedMessage dividedMessage = new(twitchBot, chatMessage.Channel, result);
             dividedMessage.StartSending();

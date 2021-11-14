@@ -88,6 +88,14 @@
         "search"
       ],
       "Cooldown": 5000
+    },
+    {
+      "CommandName": "yourMom",
+      "Alias": [
+        "yourmom",
+        "yourmomma"
+      ],
+      "Cooldown": 5000
     }
   ]
 }
