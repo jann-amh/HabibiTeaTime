@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using HabibiTeaTime.Twitch;
-using Random = HLE.Randoms.Random;
 using HLE.Strings;
 using TwitchLib.Client.Models;
+using Random = HLE.Randoms.Random;
 
 namespace HabibiTeaTime.Commands.CommandClasses
 {

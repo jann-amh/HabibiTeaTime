@@ -1,6 +1,6 @@
 ﻿using HabibiTeaTime.Twitch;
-using TwitchLib.Client.Models;
 using HLE.Emojis;
+using TwitchLib.Client.Models;
 
 namespace HabibiTeaTime.Commands.PassiveActions
 {

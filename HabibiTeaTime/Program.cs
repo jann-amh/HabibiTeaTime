@@ -1,4 +1,5 @@
-﻿using HabibiTeaTime.JsonData;
+﻿using System.Threading;
+using HabibiTeaTime.JsonData;
 using HabibiTeaTime.Twitch;
 
 namespace HabibiTeaTime
@@ -12,7 +13,7 @@ namespace HabibiTeaTime
 
             while (true)
             {
-
+                Thread.Sleep(1000);
             }
         }
     }
