@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using HLE.Time;
 using Timer = System.Timers;
-using HabibiTeaTime.Utils;
 
 namespace HabibiTeaTime.Twitch
 {
@@ -47,7 +46,7 @@ namespace HabibiTeaTime.Twitch
         private void RestartTimer_OnElapsed(object sender, Timer::ElapsedEventArgs e)
         {
             (sender as Timer::Timer).Interval = new Day().Milliseconds;
-            Restart();
+            Program.Restart();
         }
     }
 }

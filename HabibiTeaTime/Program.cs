@@ -19,7 +19,7 @@ namespace HabibiTeaTime
             }
 
         }
-        public void Restart()
+        public static void Restart()
         {
             Console.WriteLine($"Bot restarted.");
             Process.Start($"./HabibiTeaTime");
