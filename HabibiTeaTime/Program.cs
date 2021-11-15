@@ -23,7 +23,7 @@ namespace HabibiTeaTime
         {
             Console.WriteLine($"Bot restarted.");
             Process.Start($"./HabibiTeaTime");
-            Environment.Exit(0)
+            Environment.Exit(0);
         }
     }
 }

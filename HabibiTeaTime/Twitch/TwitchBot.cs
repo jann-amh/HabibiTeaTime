@@ -59,6 +59,7 @@ namespace HabibiTeaTime.Twitch
             TwitchClient.OnJoinedChannel += Client_OnJoinedChannel;
             TwitchClient.OnMessageReceived += Client_OnMessageReceived;
 
+            Restarter.InitializeResartTimer();
             TwitchClient.Connect();
         }
 
