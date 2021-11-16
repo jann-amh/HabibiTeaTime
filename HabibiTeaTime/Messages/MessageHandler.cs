@@ -12,6 +12,7 @@ namespace HabibiTeaTime.Messages
             CommandHandler.Handle(bot, chatMessage);
             UserActions.Handle(bot, chatMessage);
             MessageInterruptions.Handle(bot, chatMessage);
+            bot.AddMessage(chatMessage);
         }
     }
 }

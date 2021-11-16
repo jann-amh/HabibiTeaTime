@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using HabibiTeaTime.Database.Models;
+using HabibiTeaTime.Exceptions;
 using HabibiTeaTime.Messages;
 using HabibiTeaTime.Properties;
 using HabibiTeaTime.Twitch.Cooldowns;
+using HLE.Strings;
+using Microsoft.EntityFrameworkCore;
 using TwitchLib.Client;
 using TwitchLib.Client.Enums;
 using TwitchLib.Client.Events;
@@ -121,6 +125,34 @@ namespace HabibiTeaTime.Twitch
         public string SendPing(TwitchBot twitchBot)
         {
             return $"/me Habibi TeaTime , I'm here! {twitchBot.GetSystemInfo()}";
+        }
+
+        public static Message GetRandomMessage(ChatMessage chatMessage)
+        {
+            HabibiteatimeContext database = new();
+            Message message = database.Messages.FromSqlRaw($"SELECT * FROM messages ORDER BY RAND() LIMIT 1").FirstOrDefault();
+            return message ?? throw new MessageNotFoundException();
+        }
+        public static Message GetRandomMessage(string username)
+        {
+            HabibiteatimeContext database = new();
+            Message message = database.Messages.FromSqlRaw($"SELECT * FROM messages WHERE Username = '{username.RemoveSQLChars()}' ORDER BY RAND() LIMIT 1").FirstOrDefault();
+            return message ?? throw new MessageNotFoundException();
+        }
+        public static Message GetRandomMessage(string username, string channel)
+        {
+            HabibiteatimeContext database = new();
+            Message message = database.Messages.FromSqlRaw($"SELECT * FROM messages WHERE Username ='{username.RemoveSQLChars()}' AND Channel = '{channel.RemoveSQLChars()}' ORDER BY RAND() LIMIT 1").FirstOrDefault();
+            return message ?? throw new MessageNotFoundException();
+        }
+        public void AddMessage(ChatMessage chatMessage)
+        {
+            if (!Resources.NotLoggedChannels.Split().ToList().Contains(chatMessage.Channel))
+            {
+                HabibiteatimeContext database = new();
+                database.Messages.Add(new(chatMessage.Username, chatMessage.Channel, chatMessage.Message.Encode()));
+                database.SaveChanges();
+            }
         }
     }
 }

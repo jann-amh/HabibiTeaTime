@@ -96,6 +96,14 @@
         "yourmomma"
       ],
       "Cooldown": 5000
+    },
+    {
+      "CommandName": "randomLine",
+      "Alias": [
+        "rl",
+        "randommessage"
+      ],
+      "Cooldown": 5000
     }
   ]
 }
