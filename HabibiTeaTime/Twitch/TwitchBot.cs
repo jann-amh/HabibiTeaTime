@@ -26,7 +26,7 @@ namespace HabibiTeaTime.Twitch
 
         public WebSocketClient WebSocketClient { get; private set; }
 
-        public Restarter Restarter { get; private set; } = new(new() { new(11, 45), new(1, 0), new(1, 30), new(2, 0), new(4, 0), new(4, 10), new(4, 20), new(4, 30), new(4, 40), new(4, 50), new(5, 0) });
+        public Restarter Restarter { get; private set; } = new(new() { new(23, 45), new(23, 50), new(0, 0), new(1, 0), new(1, 30), new(2, 0), new(4, 50), new(5, 0) });
 
         public List<Cooldown> Cooldowns { get; private set; } = new();
 
