@@ -33,7 +33,7 @@ namespace HabibiTeaTime.Commands.PassiveActions
             if (chatMessage.Username == "pajbot" && chatMessage.Message == "pajaS 🚨 ALERT")
             {
                 bot.Send(chatMessage.Channel, $"peepoSpookDank {Emoji.RotatingLight} ACHTUNG !");
-                bot.Send(Resources.Offlinechat, $"jannGIGA {Emoji.RotatingLight} ALERT {Emoji.Exclamation}");
+                bot.Send(Resources.Offlinechat, $".me jannGIGA {Emoji.RotatingLight} ALERT {Emoji.Exclamation}");
             }
         }
     }
