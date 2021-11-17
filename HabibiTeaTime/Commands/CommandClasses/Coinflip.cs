@@ -1,6 +1,6 @@
 ﻿using HabibiTeaTime.Twitch;
 using HLE.Emojis;
-using HLE.Randoms;
+using HLE.Random;
 using TwitchLib.Client.Models;
 
 namespace HabibiTeaTime.Commands.CommandClasses

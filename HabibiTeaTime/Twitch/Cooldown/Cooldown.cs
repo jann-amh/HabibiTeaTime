@@ -1,4 +1,5 @@
-﻿using HabibiTeaTime.JsonData;
+﻿using HabibiTeaTime.Commands.Enums;
+using HabibiTeaTime.JsonData;
 using HLE.Time;
 
 namespace HabibiTeaTime.Twitch.Cooldowns
@@ -7,11 +8,11 @@ namespace HabibiTeaTime.Twitch.Cooldowns
     {
         public string Username { get; }
 
-        public string Type { get; }
+        public CommandType Type { get; }
 
         public long Time { get; private set; }
 
-        public Cooldown(string username, string type)
+        public Cooldown(string username, CommandType type)
         {
             Username = username;
             Type = type;

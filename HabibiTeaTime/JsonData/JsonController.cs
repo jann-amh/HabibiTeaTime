@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using HabibiTeaTime.Commands.Enums;
 using HLE.Collections;
 
 namespace HabibiTeaTime.JsonData
@@ -18,9 +19,9 @@ namespace HabibiTeaTime.JsonData
             Yourmom = JsonSerializer.Deserialize<List<string>>(File.ReadAllText("./Resources/YourMom.json"));
         }
 
-        public static Command GetCommand(string name)
+        public static Command GetCommand(CommandType name)
         {
-            return CommandData.Commands.FirstOrDefault(c => c.CommandName.ToLower() == name.ToLower());
+            return CommandData.Commands.FirstOrDefault(c => c.CommandName.ToLower() == name.ToString().ToLower());
         }
 
         public static string GetRrandomJoke()

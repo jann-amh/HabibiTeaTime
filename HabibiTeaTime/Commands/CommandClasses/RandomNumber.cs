@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using HabibiTeaTime.Twitch;
 using HLE.Strings;
 using TwitchLib.Client.Models;
-using Random = HLE.Randoms.Random;
+using Random = HLE.Random.Random;
 
 namespace HabibiTeaTime.Commands.CommandClasses
 {

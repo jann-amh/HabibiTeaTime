@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using HabibiTeaTime.Commands.Enums;
 using HabibiTeaTime.JsonData;
 using HabibiTeaTime.Twitch;
+using HLE.Enums;
 using HLE.Strings;
 using TwitchLib.Client.Models;
 
@@ -11,16 +13,17 @@ namespace HabibiTeaTime.Commands
     {
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
-            foreach (Command command in JsonController.CommandData.Commands)
+            foreach (CommandType commandType in typeof(CommandType).ToArray<CommandType>())
             {
-                if (!bot.IsOnCooldown(chatMessage.Username, command.CommandName))
+                if (!bot.IsOnCooldown(chatMessage.Username, commandType))
                 {
-                    foreach (string alias in command.Alias)
+                    foreach (string alias in JsonController.GetCommand(commandType).Alias)
                     {
                         if (chatMessage.Message.IsMatch(@"^" + Regex.Escape(Config.Prefix) + alias + @"(\s|$)"))
                         {
-                            Type.GetType($"HabibiTeaTime.Commands.CommandClasses.{FirstCharToUppercase(command.CommandName)}").GetMethod("Handle").Invoke(null, new object[] { bot, chatMessage });
-                            bot.AddCooldown(chatMessage.Username, command.CommandName);
+                            Type.GetType($"HabibiTeaTime.Commands.CommandClasses.{commandType}").GetMethod("Handle").Invoke(null, new object[] { bot, chatMessage });
+                            bot.AddCooldown(chatMessage.Username, commandType);
+                            break;
                         }
                     }
                 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using HabibiTeaTime.Commands.Enums;
 using HabibiTeaTime.Database.Models;
 using HabibiTeaTime.Exceptions;
 using HabibiTeaTime.Messages;
@@ -58,7 +59,6 @@ namespace HabibiTeaTime.Twitch
             };
             TwitchClient.Initialize(ConnectionCredentials, Config.GetChannels());
 
-            TwitchClient.OnLog += Client_OnLog;
             TwitchClient.OnConnected += Client_OnConnected;
             TwitchClient.OnJoinedChannel += Client_OnJoinedChannel;
             TwitchClient.OnMessageReceived += Client_OnMessageReceived;
@@ -89,22 +89,17 @@ namespace HabibiTeaTime.Twitch
             Console.WriteLine("Bot Connected.");
         }
 
-        private void Client_OnLog(object sender, OnLogArgs e)
-        {
-            //ConsoleOut($"LOG>{e.Data}");
-        }
-
         private void Client_OnDisconnect(object sender, OnDisconnectedArgs e)
         {
             Console.WriteLine($"Bot Disconnected.");
         }
 
-        public bool IsOnCooldown(string username, string commandType)
+        public bool IsOnCooldown(string username, CommandType commandType)
         {
-            return Cooldowns.Any(c => c.Username == username && c.Type == commandType.ToLower() && c.Time > Now());
+            return Cooldowns.Any(c => c.Username == username && c.Type == commandType && c.Time > Now());
         }
 
-        public void AddCooldown(string username, string commandType)
+        public void AddCooldown(string username, CommandType commandType)
         {
             Cooldown cooldown = Cooldowns.FirstOrDefault(c => c.Username == username && c.Type == commandType);
             Cooldowns.Remove(cooldown);

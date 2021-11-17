@@ -12,7 +12,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="EntityFramework" Version="6.4.4" />
-		<PackageReference Include="HLE" Version="1.2.1" />
+		<PackageReference Include="HLE" Version="1.2.5" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
