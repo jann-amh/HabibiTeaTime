@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 using HabibiTeaTime.JsonData;
+using HabibiTeaTime.Logging;
 using HabibiTeaTime.Twitch;
 
 namespace HabibiTeaTime
@@ -21,6 +22,7 @@ namespace HabibiTeaTime
         }
         public static void Restart()
         {
+            Logger.Log("Bot Restartet.");
             Console.WriteLine($"Bot restarted.");
             Process.Start($"./HabibiTeaTime");
             Environment.Exit(0);
