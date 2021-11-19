@@ -8,6 +8,7 @@ using HabibiTeaTime.Exceptions;
 using HabibiTeaTime.Messages;
 using HabibiTeaTime.Properties;
 using HabibiTeaTime.Twitch.Cooldowns;
+using HLE.Emojis;
 using HLE.Strings;
 using Microsoft.EntityFrameworkCore;
 using TwitchLib.Client;
@@ -31,7 +32,7 @@ namespace HabibiTeaTime.Twitch
 
         public WebSocketClient WebSocketClient { get; private set; }
 
-        public Restarter Restarter { get; private set; } = new(new() { new(23, 45), new(23, 50), new(0, 0), new(1, 0), new(1, 30), new(2, 0), new(4, 50), new(5, 0) });
+        public Restarter Restarter { get; private set; } = new();
 
         public List<Cooldown> Cooldowns { get; private set; } = new();
 
@@ -63,8 +64,8 @@ namespace HabibiTeaTime.Twitch
             TwitchClient.OnJoinedChannel += Client_OnJoinedChannel;
             TwitchClient.OnMessageReceived += Client_OnMessageReceived;
 
-            Restarter.InitializeResartTimer();
             TwitchClient.Connect();
+            Program.Restarting += (sender, e) => Send(Resources.Offlinechat, $"/me Habibi {Emoji.RotatingLight} restart");
         }
 
         public void Send(string channel, string message)

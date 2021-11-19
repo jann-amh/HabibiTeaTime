@@ -11,9 +11,11 @@ namespace HabibiTeaTime.Twitch
 
         private List<(int Hour, int Minute)> _restartTimes;
 
-        public Restarter(List<(int, int)> restartTimes)
+        public Restarter()
         {
-            _restartTimes = restartTimes;
+            Timer::Timer timer = new(new Hour(2).Milliseconds);
+            timer.Elapsed += (sender, e) => Program.Restart();
+            timer.Start();
         }
 
         public void InitializeResartTimer()

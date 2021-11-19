@@ -9,6 +9,7 @@ namespace HabibiTeaTime
 {
     public class Program
     {
+        public static event EventHandler Restarting;
         private static void Main(string[] args)
         {
             JsonController.LoadData();
@@ -22,6 +23,7 @@ namespace HabibiTeaTime
         }
         public static void Restart()
         {
+            Restarting?.Invoke(new object(), new());
             Logger.Log("Bot Restartet.");
             Console.WriteLine($"Bot restarted.");
             Process.Start($"./HabibiTeaTime");
