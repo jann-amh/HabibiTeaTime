@@ -111,7 +111,7 @@
 	</tr>
 </table> 
 <h2>Passive Actions</h2>
-<h4> The Bot has various Passive Actions listed down here:</h4>
+<h4> The bot has various passive actions listed down here:</h4>
 <table>
 	<tr>
 		<td>
