@@ -115,7 +115,7 @@ namespace HabibiTeaTime.Twitch
 
         private string GetMemoryUsage()
         {
-            return $"{Math.Truncate(Process.GetCurrentProcess().PrivateMemorySize64 / Math.Pow(10, 6) * 100) / 100}MB / 1000MB";
+            return $"{Math.Truncate(Process.GetCurrentProcess().PrivateMemorySize64 / Math.Pow(10, 6) * 100) / 100}MB / 4000MB";
         }
 
         public string SendPing(TwitchBot twitchBot)

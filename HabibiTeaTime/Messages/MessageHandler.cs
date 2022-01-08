@@ -10,7 +10,6 @@ namespace HabibiTeaTime.Messages
         public static void Handle(TwitchBot bot, ChatMessage chatMessage)
         {
             CommandHandler.Handle(bot, chatMessage);
-            UserActions.Handle(bot, chatMessage);
             MessageInterruptions.Handle(bot, chatMessage);
             bot.AddMessage(chatMessage);
         }
