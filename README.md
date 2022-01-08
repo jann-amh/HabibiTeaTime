@@ -29,6 +29,15 @@
 		<td>
 			This cmd sends a message with the color of your name.
 		</td>
+	</tr>
+	<tr>
+		<td>
+			Google
+		</td>
+		<td>
+			U can search for anything and the bot returns the google search request.
+		</td>
+	</tr>
 	<tr>
 		<td>
 			Help
@@ -71,10 +80,18 @@
 	</tr>	
 	<tr>
 		<td>
+			Random chat line (rl)
+		</td>
+		<td>
+			The bot returns a random chat line, which is logged in the DB.
+		</td>
+	</tr>
+	<tr>
+		<td>
 			Rando(random number)
 		</td>
 		<td>
-			The bot gives out a random number. U can also type a range of two numbers. The bot will give u a random number in the given range. (The range is limited to 2,147,483,647 (max range of Int32)).
+			The bot gives out a random number. U can also type a range of two numbers. The bot will give u a random number in the given range. (The range is 			 limited to 2,147,483,647 (max range of Int32)).
 		</td>
 	<tr>
 		<td>
@@ -84,9 +101,17 @@
 			This cmd deletes your previous messages.
 		</td>
 	</tr>
+	<tr>
+		<td>
+			Your mom
+		</td>
+		<td>
+			Returns a random funny mom joke based on <a href="https://github.com/jann-amh/HabibiTeaTime/blob/master/HabibiTeaTime/Resources						/YourMom.json">YourMom.json</a>.
+		</td>
+	</tr>
 </table> 
 <h2>Passive Actions</h2>
-<h4> The Bot has various Passive Actions listed down here:</h4>
+<h4> The bot has various passive actions listed down here:</h4>
 <table>
 	<tr>
 		<td>
@@ -102,6 +127,14 @@
 		</td>
 		<td>
 			If some specific users send a message, the bot returns a funny emote after the message.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			ALERT
+		</td>
+		<td>
+			Responds to <a href="https://github.com/pajbot/pajbot">pajbot</a> in pajlada's chat.
 		</td>
 	</tr>
 </table>
