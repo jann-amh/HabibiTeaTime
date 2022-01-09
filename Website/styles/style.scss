@@ -1,0 +1,44 @@
+$backgroundcolor: rgb(13, 17, 23);
+$navbarcolor: rgb(144, 89, 64);
+$font: "Roboto Mono",
+monospace;
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+.navbar {
+    background-color: $navbarcolor;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: $font;
+    font-weight: lighter;
+}
+
+.logo {
+    color: black;
+    border-radius: 100px;
+    padding: 6px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    border-radius: 100px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.nav-links li {
+    list-style: none;
+}
