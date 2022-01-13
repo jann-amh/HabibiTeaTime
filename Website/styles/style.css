@@ -3,48 +3,98 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: gray;
+  background-color: #0e0e10;
 }
 
 .navbar {
-  background-color: #905940;
+  background-color: #5833be;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 8vh;
+  min-height: 9vh;
   font-family: "Roboto Mono", monospace;
-  font-weight: lighter;
 }
 
 .logo {
-  color: black;
+  color: #d6d6d6;
   border-radius: 100px;
-  padding: 6px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 40px;
 }
 
-.nav-links {
+.wrapper {
+  margin-left: 80%;
+}
+
+.images {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.images img {
+  width: auto;
+  height: 64px;
+}
+
+.commands {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2vh;
+}
+
+.commands td {
+  border: flex;
+  border: 1px solid;
+  border-color: #d6d6d6;
+  color: #d6d6d6;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.commands a {
+  text-decoration: none;
+  color: #5833be;
+}
+
+.cmdheader {
+  color: #d6d6d6;
+  text-decoration: underline;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.tableheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 35%;
-  border-radius: 100px;
+  min-height: 8vh;
 }
 
-.nav-links a {
-  color: black;
-  text-decoration: none;
-  font-weight: lighter;
-}
-
-.nav-links li {
-  list-style: none;
+.tableheader h2,
+h4 {
+  font-family: "Roboto Mono", monospace;
+  color: #d6d6d6;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

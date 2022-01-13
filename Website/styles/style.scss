@@ -1,44 +1,86 @@
 $backgroundcolor: rgb(13, 17, 23);
-$navbarcolor: rgb(144, 89, 64);
+$navbarcolor: rgb(88, 51, 190);
 $font: "Roboto Mono",
 monospace;
 * {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: rgb(14, 14, 16);
 }
 
 .navbar {
     background-color: $navbarcolor;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 9vh;
     font-family: $font;
-    font-weight: lighter;
 }
 
 .logo {
-    color: black;
+    color: rgb(214, 214, 214);
     border-radius: 100px;
-    padding: 6px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 40px;
 }
 
-.nav-links {
+.wrapper {
+    margin-left: 80%;
+}
+
+.images {
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.images img {
+    width: auto;
+    height: 64px;
+}
+
+.commands {
     display: flex;
-    justify-content: space-around;
-    width: 35%;
-    border-radius: 100px;
+    align-items: center;
+    margin-bottom: 2vh;
 }
 
-.nav-links a {
-    color: black;
+.commands td {
+    border: flex;
+    border: 1px solid;
+    border-color: rgb(214, 214, 214);
+    color: rgb(214, 214, 214);
+    font-family: $font;
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.commands a {
     text-decoration: none;
-    font-weight: lighter;
+    color: $navbarcolor;
 }
 
-.nav-links li {
-    list-style: none;
+.cmdheader {
+    color: rgb(214, 214, 214);
+    text-decoration: underline;
+    font-family: $font;
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.tableheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+
+.tableheader h2,
+h4 {
+    font-family: $font;
+    color: rgb(214, 214, 214);
+    text-decoration: underline;
 }
