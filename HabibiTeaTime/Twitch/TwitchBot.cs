@@ -63,6 +63,7 @@ namespace HabibiTeaTime.Twitch
             TwitchClient.OnConnected += Client_OnConnected;
             TwitchClient.OnJoinedChannel += Client_OnJoinedChannel;
             TwitchClient.OnMessageReceived += Client_OnMessageReceived;
+            TwitchClient.OnLog += (a, e) => Console.WriteLine(e.Data);
 
             TwitchClient.Connect();
             Program.Restarting += (sender, e) => Send(Resources.Offlinechat, $"/me Habibi {Emoji.RotatingLight} restart");

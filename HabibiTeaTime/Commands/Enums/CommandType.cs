@@ -2,6 +2,7 @@
 {
     public enum CommandType
     {
+        ASCIIConverter,
         Chatterino,
         Coinflip,
         Color,

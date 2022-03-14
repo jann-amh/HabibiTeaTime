@@ -104,6 +104,13 @@
         "randommessage"
       ],
       "Cooldown": 5000
+    },
+    {
+      "CommandName": "asciiconverter",
+      "Alias": [
+        "ascii"
+      ],
+      "Cooldown":  5000
     }
   ]
 }
