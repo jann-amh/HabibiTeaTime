@@ -2,10 +2,11 @@
 {
     public enum CommandType
     {
-        ASCIIConverter,
+        AsciiConverter,
         Chatterino,
         Coinflip,
         Color,
+        GachiSlots,
         Google,
         Help,
         Massping,
@@ -14,6 +15,7 @@
         Pyramid,
         RandomLine,
         RandomNumber,
+        JannSlots,
         Vanish,
         YourMom
     }

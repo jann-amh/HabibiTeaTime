@@ -111,6 +111,20 @@
         "ascii"
       ],
       "Cooldown":  5000
+    },
+    {
+      "CommandName": "jannslots",
+      "Alias": [
+        "jannslots"
+      ],
+      "Cooldown": 5000
+    },
+    {
+      "CommandName": "gachislots",
+      "Alias": [
+        "gachislots"
+      ],
+      "Cooldown": 5000
     }
   ]
 }

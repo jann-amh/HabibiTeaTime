@@ -5,7 +5,7 @@ using TwitchLib.Client.Models;
 
 namespace HabibiTeaTime.Commands.CommandClasses
 {
-    public static class ASCIIConverter
+    public static class AsciiConverter
     {
 
 
