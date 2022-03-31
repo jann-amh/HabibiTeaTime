@@ -7,7 +7,7 @@
         GlobalMod,
         Broadcaster,
         Moderator,
-        VIP,
+        Vip,
         Viewer
     }
 }

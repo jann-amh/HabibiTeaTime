@@ -23,7 +23,7 @@ namespace HabibiTeaTime.HttpRequest
             JsonElement chatters = request.Data.GetProperty("chatters");
             List<Chatter> result = new();
             chatters.GetProperty("broadcaster").ToString().WordArrayStringToList().ForEach(c => result.Add(new(c, ChatRole.Broadcaster)));
-            chatters.GetProperty("vips").ToString().WordArrayStringToList().ForEach(c => result.Add(new(c, ChatRole.VIP)));
+            chatters.GetProperty("vips").ToString().WordArrayStringToList().ForEach(c => result.Add(new(c, ChatRole.Vip)));
             chatters.GetProperty("moderators").ToString().WordArrayStringToList().ForEach(c => result.Add(new(c, ChatRole.Moderator)));
             chatters.GetProperty("staff").ToString().WordArrayStringToList().ForEach(c => result.Add(new(c, ChatRole.Staff)));
             chatters.GetProperty("admins").ToString().WordArrayStringToList().ForEach(c => result.Add(new(c, ChatRole.Admin)));

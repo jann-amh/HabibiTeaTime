@@ -125,6 +125,13 @@
         "gachislots"
       ],
       "Cooldown": 5000
+    },
+    {
+      "CommandName": "apuslots",
+      "Alias": [
+        "apuslots"
+      ],
+      "Cooldown": 5000
     }
   ]
 }

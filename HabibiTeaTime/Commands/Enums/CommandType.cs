@@ -2,6 +2,7 @@
 {
     public enum CommandType
     {
+        ApuSlots,
         AsciiConverter,
         Chatterino,
         Coinflip,
